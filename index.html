@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZeroGravity - Premium App Design Studio creating immersive digital experiences with cutting-edge technology">
+    <meta name="keywords" content="app design, mobile development, UI/UX, digital agency">
+    <meta name="author" content="ZeroGravity Design">
+    <meta name="theme-color" content="#ff3e3e">
+    <meta property="og:title" content="ZeroGravity | App Design Studio">
+    <meta property="og:description" content="Premium App Design Studio creating immersive digital experiences">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zerogravity.design">
+    <title>ZeroGravity | App Design Studio</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Replace Font Awesome with modern version that's better for performance -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Load non-critical scripts with defer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="image-loader.js"></script>
+    
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ZeroGravity",
+      "url": "https://zerogravity.design",
+      "logo": "https://zerogravity.design/logo.png",
+      "description": "Premium App Design Studio creating immersive digital experiences",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Design Boulevard",
+        "addressLocality": "Creative District",
+        "addressRegion": "CA",
+        "postalCode": "94103",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "email": "contact@zerogravity.com"
+      },
+      "sameAs": [
+        "https://www.instagram.com/zerogravity",
+        "https://twitter.com/zerogravity",
+        "https://www.linkedin.com/company/zerogravity",
+        "https://www.behance.net/zerogravity"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-content">
+            <h2>ZEROGRAVITY</h2>
+            <div class="loading-bar">
+                <div class="loading-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <h1>ZERO<span>GRAVITY</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger" aria-label="Toggle navigation menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="canvas-container">
+        <canvas id="bg"></canvas>
+    </div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="content">
+                <h1 class="glitch" data-text="DESIGN BEYOND LIMITS">DESIGN BEYOND LIMITS</h1>
+                <p>Creating immersive digital experiences that push boundaries</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-primary">Start Project</a>
+                    <a href="#portfolio" class="cta-secondary">View Work</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Native and cross-platform mobile applications with cutting-edge features</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop" aria-hidden="true"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Intuitive interfaces with immersive user experiences that captivate</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Responsive websites and web applications with 3D elements and animations</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gamepad" aria-hidden="true"></i>
+                    </div>
+                    <h3>Gaming Solutions</h3>
+                    <p>Interactive game interfaces and mobile game development</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img data-src="https://via.placeholder.com/600x400/1a1a1a/cccccc?text=Project+1" alt="Nebula Social - Social media app with AR integration" width="600" height="400" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3C/svg%3E">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Nebula Social</h3>
+                        <p>Social media app with AR integration</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img data-src="https://via.placeholder.com/600x400/1a1a1a/cccccc?text=Project+2" alt="Quantum Finance - Cryptocurrency trading platform" width="600" height="400" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3C/svg%3E">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Quantum Finance</h3>
+                        <p>Cryptocurrency trading platform</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img data-src="https://via.placeholder.com/600x400/1a1a1a/cccccc?text=Project+3" alt="Orbital Fitness - Health tracking with gamification" width="600" height="400" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3C/svg%3E">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Orbital Fitness</h3>
+                        <p>Health tracking with gamification</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img data-src="https://via.placeholder.com/600x400/1a1a1a/cccccc?text=Project+4" alt="Eclipse Games - Mobile gaming platform" width="600" height="400" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3C/svg%3E">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Eclipse Games</h3>
+                        <p>Mobile gaming platform</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>We Create Digital Experiences That Matter</h3>
+                    <p>ZeroGravity is a premium app design agency where creativity meets technology. Founded in 2022, we've been pushing the boundaries of digital design and helping brands establish powerful digital presences.</p>
+                    <p>Our team of experts combines technical excellence with artistic vision to deliver products that not only look stunning but perform flawlessly.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="number">50+</span>
+                            <span class="label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">15</span>
+                            <span class="label">Team Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">8</span>
+                            <span class="label">Design Awards</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img data-src="https://via.placeholder.com/600x800/1a1a1a/cccccc?text=Team" alt="ZeroGravity Team of designers and developers" width="600" height="800" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 800'%3E%3C/svg%3E">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required aria-required="true">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required aria-required="true">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" required aria-required="true">
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required aria-required="true"></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <p>123 Design Boulevard, Creative District, CA 94103</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <p><a href="mailto:contact@zerogravity.com">contact@zerogravity.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Connect with us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="View our work on Behance"><i class="fab fa-behance" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>ZERO<span>GRAVITY</span></h2>
+                <p>Design beyond limits</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">App Development</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Gaming Solutions</a></li>
+                        <li><a href="#services">AR/VR Experiences</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> ZeroGravity. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
